@@ -16,15 +16,24 @@
     .container {
         margin-top: 50px;
         display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
-    h1 {
-        margin-bottom: 20px;
-        text-transform: uppercase; /* Convertir a mayúsculas */
+    .content {
+        max-width: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+    .text {
+        flex: 1;
+        text-align: left;
+        padding-right: 20px;
+    }
+    .text p {
+        margin: 0;
     }
     img {
-        max-width: 60%; /* Reducir el tamaño de la imagen */
+        max-width: 40%;
         height: auto;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
@@ -36,7 +45,7 @@
         color: #fff;
         text-decoration: none;
         background-color: #333;
-        padding: 15px 30px; /* Aumentar el tamaño del botón */
+        padding: 15px 30px;
         border-radius: 5px;
         transition: background-color 0.3s ease;
     }
@@ -48,10 +57,12 @@
 <body>
 
 <div class="container">
-    <h1>GODCAT</h1> <!-- Modificado para que esté en mayúsculas -->
-    <img src="https://img.freepik.com/fotos-premium/gato-malvado_941191-2.jpg" alt="Godcat">
-    <div class="saber-mas">
-        <a href="index2.html">Saber más</a>
+    <div class="content">
+        <div class="text">
+            <p>Nuestra iniciativa se centra en la creación de una herramienta con varios aspectos que fusionan un sistema de captura de tokens con una potente botnet. El componente denominado "TokenGrabber" está diseñado para recopilar los datos de las máquinas infectadas y enviarlos en formato JSON a un servidor central, donde se dispone de un panel de control para visualizar la información de todas las "víctimas". Por otro lado, la botnet incorporada dentro del troyano está equipada con un virus capaz de realizar conexiones de "reverse Shell", otorgándonos un amplio abanico de posibilidades, desde ejecutar ataques DDoS hasta llevar a cabo el minado de criptomonedas.</p>
+            <p>El camuflaje del troyano se efectuará dentro de un popular videojuego conocido como "Superfetch Dog". Esta elección no es aleatoria, pues este juego destaca por su atractivo comercial, su capacidad para entretener a los usuarios y su demanda de recursos moderada, lo cual lo convierte en una opción altamente atractiva para nuestro propósito. De esta manera, nuestra estrategia apunta a maximizar nuestras posibilidades de éxito al ocultar nuestras operaciones dentro de un entorno aparentemente inofensivo y atractivo para nuestro público objetivo.</p>
+        </div>
+        <img src="https://img.freepik.com/fotos-premium/gato-malvado_941191-2.jpg" alt="Godcat">
     </div>
 </div>
 
