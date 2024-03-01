@@ -48,19 +48,33 @@
     .saber-mas a:hover {
         background-color: #555;
     }
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .flex-item {
+        flex: 0 0 48%;
+        margin-bottom: 20px;
+    }
 </style>
 </head>
 <body>
 
 <div class="container">
     <h1>GodCat</h1>
-    <div class="botnet-info">
-        <p>Nuestra iniciativa se centra en la creación de una herramienta con varios aspectos que fusionan un sistema de captura de tokens con una potente botnet. El componente denominado "TokenGrabber" está diseñado para recopilar los datos de las máquinas infectadas y enviarlos en formato JSON a un servidor central, donde se dispone de un panel de control para visualizar la información de todas las "víctimas". Por otro lado, la botnet incorporada dentro del troyano está equipada con un virus capaz de realizar conexiones de "reverse Shell", otorgándonos un amplio abanico de posibilidades, desde ejecutar ataques DDoS hasta llevar a cabo el minado de criptomonedas. El camuflaje del troyano se efectuará dentro de un popular videojuego conocido como "Superfetch Dog". Esta elección no es aleatoria, pues este juego destaca por su atractivo comercial, su capacidad para entretener a los usuarios y su demanda de recursos moderada, lo cual lo convierte en una opción altamente atractiva para nuestro propósito. De esta manera, nuestra estrategia apunta a maximizar nuestras posibilidades de éxito al ocultar nuestras operaciones dentro de un entorno aparentemente inofensivo y atractivo para nuestro público objetivo.</p>
-        <div class="saber-mas">
-            <a href="index2.html">Saber más</a>
+    <div class="flex-container">
+        <div class="botnet-info flex-item">
+            <p>Nuestra iniciativa se centra en la creación de una herramienta con varios aspectos que fusionan un sistema de captura de tokens con una potente botnet. El componente denominado "TokenGrabber" está diseñado para recopilar los datos de las máquinas infectadas y enviarlos en formato JSON a un servidor central, donde se dispone de un panel de control para visualizar la información de todas las "víctimas". Por otro lado, la botnet incorporada dentro del troyano está equipada con un virus capaz de realizar conexiones de "reverse Shell", otorgándonos un amplio abanico de posibilidades, desde ejecutar ataques DDoS hasta llevar a cabo el minado de criptomonedas. El camuflaje del troyano se efectuará dentro de un popular videojuego conocido como "Superfetch Dog". Esta elección no es aleatoria, pues este juego destaca por su atractivo comercial, su capacidad para entretener a los usuarios y su demanda de recursos moderada, lo cual lo convierte en una opción altamente atractiva para nuestro propósito. De esta manera, nuestra estrategia apunta a maximizar nuestras posibilidades de éxito al ocultar nuestras operaciones dentro de un entorno aparentemente inofensivo y atractivo para nuestro público objetivo.</p>
+            <div class="saber-mas">
+                <a href="url_de_la_otra_pagina.html">Saber más</a>
+            </div>
+        </div>
+        <div class="flex-item">
+            <img src="https://img.freepik.com/fotos-premium/gato-malvado_941191-2.jpg" alt="GodCat">
         </div>
     </div>
-    <img src="https://img.freepik.com/fotos-premium/gato-malvado_941191-2.jpg" alt="GodCat">
 </div>
 
 </body>
