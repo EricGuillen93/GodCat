@@ -1,1 +1,65 @@
-hola
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GodCat</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .botnet-info {
+        max-width: 60%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    img {
+        max-width: 40%; /* Reducir el tamaño de la imagen */
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        margin-bottom: 20px; /* Agregado para mover la imagen hacia abajo */
+    }
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .flex-item {
+        flex: 0 0 48%;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>GodCat</h1>
+    <div class="flex-container">
+        <div class="botnet-info flex-item">
+            <p>Nuestra iniciativa se centra en la creación de una herramienta con varios aspectos que fusionan un sistema de captura de tokens con una potente botnet. El componente denominado "TokenGrabber" está diseñado para recopilar los datos de las máquinas infectadas y enviarlos en formato JSON a un servidor central, donde se dispone de un panel de control para visualizar la información de todas las "víctimas". Por otro lado, la botnet incorporada dentro del troyano está equipada con un virus capaz de realizar conexiones de "reverse Shell", otorgándonos un amplio abanico de posibilidades, desde ejecutar ataques DDoS hasta llevar a cabo el minado de criptomonedas.</p>
+        </div>
+        <div class="flex-item">
+            <img src="https://img.freepik.com/fotos-premium/gato-malvado_941191-2.jpg" alt="GodCat">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
