@@ -46,10 +46,16 @@
         flex: 0 0 48%;
         margin-bottom: 40px;
     }
+    .saber-mas-container {
+        text-align: center;
+    }
     .saber-mas {
-        color: #fff;
+        color: #000; /* Cambiar el color del texto a negro */
+        background-color: #fff; /* Establecer un fondo blanco */
         text-decoration: none;
         font-size: 18px;
+        padding: 10px 20px; /* Añadir espacio alrededor del texto */
+        border-radius: 5px; /* Agregar bordes redondeados */
     }
 </style>
 </head>
@@ -63,7 +69,9 @@
         </div>
         <div class="botnet-info flex-item">
             <p>Nuestra iniciativa se centra en la creación de una herramienta con varios aspectos que fusionan un sistema de captura de tokens con una potente botnet. El componente denominado "TokenGrabber" está diseñado para recopilar los datos de las máquinas infectadas y enviarlos en formato JSON a un servidor central, donde se dispone de un panel de control para visualizar la información de todas las "víctimas". Por otro lado, la botnet incorporada dentro del troyano está equipada con un virus capaz de realizar conexiones de "reverse Shell", otorgándonos un amplio abanico de posibilidades, desde ejecutar ataques DDoS hasta llevar a cabo el minado de criptomonedas.</p>
-            <a href="index2.html" class="saber-mas">Saber más</a>
+            <div class="saber-mas-container">
+                <a href="index2.html" class="saber-mas">Saber más</a>
+            </div>
         </div>
     </div>
 </div>
