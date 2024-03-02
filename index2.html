@@ -10,6 +10,7 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
     padding: 20px;
+    margin: 0;
 }
 
 .container {
@@ -24,7 +25,10 @@ h1 {
 ul {
     list-style-type: none;
     padding: 0;
-    margin-bottom: 20px; /* Agregamos margen inferior para separar el índice del contenido */
+    position: fixed;
+    top: 50px; /* Ajusta según sea necesario */
+    left: 20px; /* Ajusta según sea necesario */
+    z-index: 999; /* Para asegurarse de que esté por encima del contenido */
 }
 
 ul li {
@@ -46,6 +50,18 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+#contenido {
+    margin-top: 50px; /* Ajusta según sea necesario para evitar que se solape con el índice */
+}
+
+#contenido:target ul {
+    visibility: visible; /* Hace visible el índice cuando se hace clic en un enlace */
+}
+
+ul {
+    visibility: hidden; /* Oculta el índice por defecto */
 }
 </style>
 </head>
@@ -84,7 +100,7 @@ a:hover {
 </div>
 
 <!-- Contenido -->
-<div class="container">
+<div id="contenido" class="container">
     <h2 id="gestion-proyecto">Gestión del proyecto</h2>
     <p>
         La infraestructura de nuestro proyecto consiste en un servidor y varias máquinas virtuales dentro para ello vamos a utilizar el sistema de virtualización “VirtualBox”...
