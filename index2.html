@@ -3,74 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GodCat</title>
+<title>Memoria del Proyecto - GodCat</title>
 <style>
     body {
         font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #000;
-        color: #fff;
         margin: 0;
         padding: 0;
+        background-color: #f1f1f1;
     }
     .container {
-        margin-top: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    h1 {
-        text-transform: uppercase;
-        margin-bottom: 40px;
-        font-size: 36px;
-    }
-    .botnet-info {
-        max-width: 60%;
-        text-align: left;
-        margin-bottom: 40px;
-    }
-    img {
-        max-width: 50%;
-        height: auto;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
         border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-        margin-bottom: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    .flex-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap-reverse;
+    h1, h2, h3 {
+        color: #333;
     }
-    .flex-item {
-        flex: 0 0 48%;
-        margin-bottom: 40px;
+    p {
+        color: #666;
+        line-height: 1.6;
     }
-    .saber-mas-container {
-        text-align: center;
+    .section {
+        margin-top: 30px;
     }
-    .saber-mas {
-        color: blue; /* Cambiar el color del enlace a azul */
-        text-decoration: none;
-        font-size: 18px;
+    .sub-section {
+        margin-top: 20px;
     }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>GodCat</h1>
-    <div class="flex-container">
-        <div class="flex-item">
-            <img src="https://img.freepik.com/fotos-premium/gato-malvado_941191-2.jpg" alt="GodCat">
+    <h1>Memoria del Proyecto - GodCat</h1>
+
+    <div class="section">
+        <h2>Integrantes</h2>
+        <p>- Lluc Omella Sampera</p>
+        <p>- Eric Guillen Artacho</p>
+        <p>- José Antonio Pineda Fernandez</p>
+    </div>
+
+    <div class="section">
+        <h2>Abstract</h2>
+        <p>Nuestra iniciativa se centra en la creación de una herramienta con varios aspectos que fusionan un sistema de captura de tokens con una potente botnet. El componente denominado "TokenGrabber" está diseñado para recopilar los datos de las máquinas infectadas y enviarlos en formato JSON a un servidor central, donde se dispone de un panel de control para visualizar la información de todas las "víctimas". Por otro lado, la botnet incorporada dentro del troyano está equipada con un virus capaz de realizar conexiones de "reverse Shell", otorgándonos un amplio abanico de posibilidades, desde ejecutar ataques DDoS hasta llevar a cabo el minado de criptomonedas. El camuflaje del troyano se efectuará dentro de un popular videojuego conocido como "Superfetch Dog". Esta elección no es aleatoria, pues este juego destaca por su atractivo comercial, su capacidad para entretener a los usuarios y su demanda de recursos moderada, lo cual lo convierte en una opción altamente atractiva para nuestro propósito.</p>
+    </div>
+
+    <div class="section">
+        <h2>Introducción</h2>
+        <p>La infraestructura de nuestro proyecto consiste en un servidor y varias máquinas virtuales dentro para ello vamos a utilizar el sistema de virtualización “VirtualBox”. Una de las maquinas llevara la “beef” tool (apartado beef tool), con la web y allí el troyano (apartado troyano). Otra tendrá la bbdd(apartado bbdd), en la otra habrá el visor de la bbdd (apartado visor) y el botmaster(apartado botmaster).</p>
+    </div>
+
+    <div class="section">
+        <h2>Gestión del proyecto</h2>
+        <div class="sub-section">
+            <h3>Jose:</h3>
+            <p>La parte que está haciendo Jose, que es la BBDD lo que se iba a hacer es migrar la BBDD a MySQL y una vez pasado a MySQL ponerlo en la BBDD de XAMPP, esto se iba a hacer en una máquina virtual Windows en el pc de Jose...</p>
         </div>
-        <div class="botnet-info flex-item">
-            <p>Nuestra iniciativa se centra en la creación de una herramienta con varios aspectos que fusionan un sistema de captura de tokens con una potente botnet. El componente denominado "TokenGrabber" está diseñado para recopilar los datos de las máquinas infectadas y enviarlos en formato JSON a un servidor central, donde se dispone de un panel de control para visualizar la información de todas las "víctimas". Por otro lado, la botnet incorporada dentro del troyano está equipada con un virus capaz de realizar conexiones de "reverse Shell", otorgándonos un amplio abanico de posibilidades, desde ejecutar ataques DDoS hasta llevar a cabo el minado de criptomonedas.</p>
-            <div class="saber-mas-container">
-                <a href="index2.html" class="saber-mas">Saber más</a>
-            </div>
+        <div class="sub-section">
+            <h3>Eric:</h3>
+            <p>Lo que está haciendo Eric, es crear un virus con metasploit, en una maquina linux. El virus se ha creado desde el "msfconsole" con el lenguaje de programación "Ruby", este lenguaje, se conoce mucho por su sintaxis simple y elegante, en resumen, es un lenguaje fácil de utilizar...</p>
+        </div>
+        <div class="sub-section">
+            <h3>Lluc:</h3>
+            <p>Teoría: Lo primero que hay que entender de nuestro proyecto es que todo lo estamos haciendo está en un entorno seguro y que nadie externo al proyecto se ve afectado por el malware...</p>
         </div>
     </div>
+
+    <div class="section">
+        <h2>Teoría</h2>
+        <p>Lo primero que hay que entender de nuestro proyecto es que todo lo estamos haciendo está en un entorno seguro y que nadie externo al proyecto se ve afectado por el malware. Las victimas que vamos a utilizar para recabar los datos seremos nosotros o cuentas que nos inventemos para que nadie se vea afectado...</p>
+    </div>
+
+    <div class="section">
+        <h2>Diseño y arquitectura</h2>
+        <p>Aquí dejamos una captura del esquema y el link para que podáis ver el esquema que hemos hecho sobre cómo funciona nuestro proyecto y los apartados en los que se centran cada uno.</p>
+        <p>Link: GodCat – Figma</p>
+    </div>
+
+    <div class="section">
+        <h2>Explicación de las partes del proyecto</h2>
+        <div class="sub-section">
+            <h3>Beef Tool</h3>
+            <p>La Beef Tool es una herramienta desarrollada por Wade Alcorn, que amplifica nuestras capacidades al permitirnos alojar una página web en un servidor Apache...</p>
+        </div>
+        <div class="sub-section">
+            <h3>Troyano</h3>
+            <p>BBDD: La principalmente se iba hacer de la siguiente manera, primero íbamos ha exportar la BBDD de la Beef Tool, para ello teníamos que pasar la BBDD a MySQL ya que en la Beef Tool está en formato SQL...</p>
+        </div>
+        <div class="sub-section">
+            <h3>Virus</h3>
+            <p>El virus que hemos hecho es con el fin de poder acceder al terminal del dispositivo el cual esta infectado, para conseguir crear el virus hemos seguido una guía que hemos encontrado en esta web “página web”...</p>
+        </div>
+        <div class="sub-section">
+            <h3>Botnet</h3>
+            <p>La BotMaster aún no ha sido completamente desarrollada ni implementada. Sin embargo, su concepto principal consiste en la capacidad de controlar múltiples dispositivos informáticos desde una ubicación centralizada...</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Bibliografía</h2>
+        <p>Webgrafía:</p>
+        <ul>
+            <li>BBDD: 7</li>
+            <li>Virus: 7</li>
+            <li>Página videojuego: 7</li>
+            <li>Beef Tool: 7</li>
+            <li>Tokengraven: 7</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Anexos</h2>
+        <p>Anexo 1. Enlaces: Github. 7</p>
+        <p>Anexo 2. IPOP 7</p>
+        <p>Anexo 3. Plan empresa 7</p>
+        <p>Anexo 4. Acuerdo de equipo 8</p>
+        <p>Anexo 5. ... 8</p>
+    </div>
+
 </div>
 
 </body>
