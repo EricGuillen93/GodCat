@@ -1,76 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Índice</title>
+<title>Documento</title>
 <style>
     body {
+        background-color: black;
+        color: white;
         font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f1f1f1;
-    }
-    .container {
-        max-width: 800px;
-        margin: 20px auto;
         padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    h1, h2, h3 {
-        color: #333;
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-    li {
-        margin-bottom: 10px;
-    }
-    a {
-        text-decoration: none;
-        color: #333;
-    }
-    a:hover {
-        text-decoration: underline;
+    h1 {
+        color: red;
     }
 </style>
 </head>
 <body>
+<h1>Abstract</h1>
+<p>Nuestra iniciativa se centra en la creación de una herramienta con varios aspectos que fusionan un sistema de captura de tokens con una potente botnet. El componente denominado "Token Grabber" está diseñado para recopilar los datos de las máquinas infectadas y enviarlos en formato JSON a un servidor central, donde se dispone de un panel de control para visualizar la información de todas las "víctimas". Por otro lado, la botnet incorporada dentro del troyano está equipada con un virus capaz de realizar conexiones de "reverse Shell", otorgándonos un amplio abanico de posibilidades, desde ejecutar ataques DDoS hasta llevar a cabo el minado de criptomonedas.</p>
 
-<div class="container">
-    <h1>Índice</h1>
-    <ul>
-        <li><a href="#introduccion">Introducción</a>
-            <ul>
-                <li><a href="#gestion-proyecto">Gestión del proyecto</a></li>
-                <li><a href="#teoria">Teoría</a></li>
-                <li><a href="#diseno-arquitectura">Diseño y arquitectura</a></li>
-            </ul>
-        </li>
-        <li><a href="#explicacion-partes-proyecto">Explicación de las partes del proyecto</a>
-            <ul>
-                <li><a href="#beef-tool">Beef Tool</a></li>
-                <li><a href="#troyano">Troyano</a></li>
-                <li><a href="#bbdd">BBDD</a></li>
-                <li><a href="#visor-bbdd">Visor BBDD</a></li>
-                <li><a href="#botmaster">BOTMASTER</a></li>
-                <li><a href="#virus">Virus</a></li>
-            </ul>
-        </li>
-        <li><a href="#webgrafia">Webgrafía</a>
-            <ul>
-                <li><a href="#bbdd-webgrafia">BBDD</a></li>
-                <li><a href="#virus-webgrafia">Virus</a></li>
-                <li><a href="#pagina-videojuego">Página videojuego</a></li>
-                <li><a href="#beef-tool-webgrafia">Beef Tool</a></li>
-                <li><a href="#token-graven">Token Graven</a></li>
-            </ul>
-        </li>
-    </ul>
-</div>
+<p>La información que vamos a recopilar de las victimas va a ser las siguiente:</p>
 
+<h2>Introducción</h2>
+<p>La infraestructura de nuestro proyecto consiste en un servidor y varias máquinas virtuales dentro para ello vamos a utilizar el sistema de virtualización “VirtualBox”. Una de las maquinas llevara la “beef” tool (apartado beef tool), con la web y allí el troyano (apartado troyano). Otra tendrá la bbdd(apartado bbdd), en la otra habrá el visor de la bbdd (apartado visor) y el Bot master (apartado Bot master).</p>
+
+<h2>Gestión del proyecto</h2>
+<p>El proyecto lo hemos dividido en tres partes según los integrantes que somos en el grupo:</p>
+<ul>
+    <li><strong>Jose:</strong> La parte que está haciendo Jose, que es la BBDD lo que se iba a hacer es migrar la BBDD a MySQL y una vez pasado a MySQL ponerlo en la BBDD de XAMPP, esto se iba a hacer en una máquina virtual Windows en el pc de Jose. Como vimos que nos estaba complicando, Lluc dio la idea de crear un (TOQUEM) compatible con el lenguaje de programación (JSON) y luego pasarlo al lenguaje de programación (PYTHON), para que sea más sencillo de ordenar la información. El ordenador donde se está haciendo es el que se encuentra al fondo de la clase pegado a la ventana.</li>
+    <li><strong>Eric:</strong> Lo que está haciendo Eric, es crear un virus con metasploit, en una maquina linux. El virus se ha creado desde el "msfconsole" con el lenguaje de programación "Ruby", este lenguaje, se conoce mucho por su sintaxis simple y elegante, en resumen, es un lenguaje fácil de utilizar. El virus que ha creado, lo que hace es darte acceso a la terminal del pc infectado, cuando la víctima procede a ejecutar el virus(.exe), a la maquina servidor, le llega la ip del pc infectado y en ese preciso momento le da acceso a la terminal y tienes acceso a prácticamente todo.</li>
+    <li><strong>Lluc:</strong> Teoría Lo primero que hay que entender de nuestro proyecto es que todo lo estamos haciendo está en un entorno seguro y que nadie externo al proyecto se ve afectado por el malware. Las victimas que vamos a utilizar para recabar los datos seremos nosotros o cuentas que nos inventemos para que nadie se vea afectado. La Beef Tool es la encargada de recopilar la información del ordenador que ha entrado en la página web. Luego esos datos pasan a la BBDD la cual se has tenido que migrar a MySQL, gracias a los datos recopilados por la Beef Tool se puede llevar a cabo el enseñar como se hace el ataque a un servidor. Aparte otra manera de recopilar información de los ordenadores es con el videojuego el cual se llama "Superfetch Dog", este juego llevara el malware que se encargara de coger información de la persona que lo descargue.</li>
+</ul>
+
+<h2>Diseño y arquitectura</h2>
+<p>Aquí dejamos una captura del esquema y el link para que podáis ver el esquema que hemos hecho sobre cómo funciona nuestro proyecto y los apartados en los que se centran cada uno.</p>
+<p>Link: GodCat – Figma</p>
+
+<h2>Explicación de las partes del proyecto</h2>
+
+<h3>Beef Tool</h3>
+<p>La Beef Tool es una herramienta desarrollada por Wade Alcorn, que amplifica nuestras capacidades al permitirnos alojar una página web en un servidor Apache. Lo que la hace aún más poderosa es su capacidad para comprometer a aquellos que acceden a dicha página, aprovechando la ejecución de payloads diseñados meticulosamente. En nuestra táctica, utilizamos esta herramienta para alojar nuestra página web, que constituye la primera fase de nuestro ataque estratégico. Hemos clonado una página web altamente popular, steamunlocked.net, para mejorar la estética y aumentar la probabilidad de retención del visitante. La decisión de clonar esta página no fue al azar; su diseño atractivo y familiaridad entre los usuarios aumentan significativamente las posibilidades de que los visitantes permanezcan en nuestro sitio y opten por descargar el juego que ofrecemos. Si bien la Beef Tool se emplea principalmente para alojar la página web, su potencial va mucho más allá. Esta herramienta, concebida para aprovechar las vulnerabilidades del visitante, nos brinda un amplio margen de maniobra y posibilidades creativas si decidimos explorar su uso exclusivamente a nivel web. En resumen, la Beef Tool no solo sirve como una herramienta técnica para la ejecución de nuestra estrategia, sino que también representa un elemento crucial en la creación de una experiencia atractiva y convincente para nuestros potenciales usuarios. Su integración inteligente y eficiente dentro de nuestro plan global garantiza que estemos mejor posicionados para alcanzar nuestros objetivos con éxito.</p>
+
+<h3>Troyano</h3>
+
+<h3>BBDD</h3>
+<p>La principalmente se iba hacer de la siguiente manera, primero íbamos a exportar la BBDD de la Beef Tool, para ello teníamos que pasar la BBDD a MySQL ya que en la Beef Tool está en formato SQL. Como nos daba muchos problemas a la hora de poder exportar la BBDD decidimos exportar la BBDD a DB browser ya que el formato es SQL, luego queríamos pasarlo a XAMPP ya que la interfaz es mucho más simple de entender e interactiva. Esta vez también nos dio problemas por el lenguaje, así que Lluc tuvo la idea de hacer un Token graven ya que es compatible con el lenguaje de programación JSON y así lo que podíamos hacer es que cuando el Token graven recopilara la información la mande directamente al formato JSON y así solo hay que poner los datos en el visor y sea más fácil.</p>
+
+<h3>VISOR BBDD</h3>
+<p>El visor de la BBDD va a consistir en una interface donde se pueda ver la información de la BBDD, pero de manera que cualquiera lo pueda entender fácilmente y que sea más gráfica, esta parte del proyecto todavía no hemos empezado a hacerla ya que habíamos tenido problemas en la BBDD.</p>
+
+<h3>BOTMASTER</h3>
+<p>La Bot Máster aún no se ha desarrollado ni implementado. Sin embargo, su concepto principal consiste en controlar múltiples dispositivos informáticos desde una ubicación centralizada. La idea detrás de la Bot Máster es lograr un control total sobre una red de ordenadores infectados, permitiendo que el Bot Master ejecute comandos y tome el control de estos dispositivos. El objetivo final de la BotMaster es obtener un control remoto total sobre los PCs infectados, lo que posibilitaría realizar una amplia gama de acciones, como el envío de spam, ataques de denegación de servicio (DDoS), entre otros. Es importante destacar que este proceso aún no ha sido llevado a cabo y se encuentra en etapas de planificación o desarrollo.</p>
+
+<h3>Virus</h3>
+<p>El virus que hemos hecho es con el fin de poder acceder al terminal del dispositivo el cual está infectado, para conseguir crear el virus hemos seguido una guía que hemos encontrado en esta web “página web”. Lo que puede hacer el virus es darte la libertad de poder navegar por el terminal del ordenador pudiendo crear carpetas, buscar páginas webs, instalar aplicaciones, etc.</p>
+
+<h2>Webgrafía</h2>
+<h3>BBDD</h3>
+<ul>
+    <li>MySQL</li>
+    <li>PostgreSQL Tutorial</li>
+    <li>DB Browser for SQLite (<a href="https://sqlitebrowser.org">sqlitebrowser.org</a>)</li>
+    <li>XAMPP Installers and Downloads for Apache Friends</li>
+    <li><a href="https://youtu.be/2UnC-XNDFSI?si=omuvMVHYEUVQzqUR">Video 1</a></li>
+    <li><a href="https://youtu.be/uZrrtTuWKfk?si=I9mcT1759JSE7VK4">Video 2</a></li>
+    <li><a href="https://hubspot.es">JSON para principiantes: qué es, para qué sirve y ejemplos</a></li>
+    <li><a href="https://youtu.be/hNetIQwTzM0?si=8klxYkXnCWQEU14z">Video 3</a></li>
+</ul>
+
+<h3>Virus</h3>
+<ul>
+    <li>Creación de virus, ocultación y control remoto del equipo víctima. Kali Linux. - Hardsoft Security</li>
+</ul>
+
+<h3>Página videojuego</h3>
+<ul>
+    <li><a href="https://youtu.be/BvZJ2nwap84?si=3iVKRg0DsSet2vsz">Video</a></li>
+    <li>Superfetch Dog en Steam (<a href="https://steampowered.com">steampowered.com</a>)</li>
+</ul>
+
+<h3>Beef Tool</h3>
+<ul>
+    <li>BeEF - The Browser Exploitation Framework Project (<a href="https://beefproject.com">beefproject.com</a>)</li>
+    <li><a href="https://youtu.be/hD_JRo7YPcg?si=D3auNrdFvC-oc9bD">Video</a></li>
+</ul>
+
+<h3>Token graven</h3>
 </body>
 </html>
