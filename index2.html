@@ -10,7 +10,7 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
     padding: 20px;
-    margin: 0;
+    margin: 0; /* Eliminamos el margen predeterminado del cuerpo */
 }
 
 .container {
@@ -25,10 +25,7 @@ h1 {
 ul {
     list-style-type: none;
     padding: 0;
-    position: fixed;
-    top: 50px; /* Ajusta según sea necesario */
-    left: 20px; /* Ajusta según sea necesario */
-    z-index: 999; /* Para asegurarse de que esté por encima del contenido */
+    margin: 0; /* Eliminamos el margen predeterminado de la lista */
 }
 
 ul li {
@@ -52,125 +49,86 @@ a:hover {
     text-decoration: underline;
 }
 
-#contenido {
-    margin-top: 50px; /* Ajusta según sea necesario para evitar que se solape con el índice */
-}
-
-#contenido:target ul {
-    visibility: visible; /* Hace visible el índice cuando se hace clic en un enlace */
-}
-
-ul {
-    visibility: hidden; /* Oculta el índice por defecto */
+/* Estilo para fijar el índice en la parte superior de la ventana del navegador */
+#indice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111; /* Cambiamos el color de fondo para que se diferencie del contenido */
+    padding: 10px;
+    width: 100%;
+    z-index: 1000; /* Aseguramos que esté por encima del resto del contenido */
 }
 </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Índice</h1>
-    <ul>
-        <li>Introducción
-            <ul>
-                <li><a href="#gestion-proyecto">Gestión del proyecto</a></li>
-                <li><a href="#teoria">Teoría</a></li>
-                <li><a href="#diseno-arquitectura">Diseño y arquitectura</a></li>
-            </ul>
-        </li>
-        <li>Explicación de las partes del proyecto
-            <ul>
-                <li><a href="#beef-tool">Beef Tool</a></li>
-                <li><a href="#troyano">Troyano</a></li>
-                <li><a href="#bbdd">BBDD</a></li>
-                <li><a href="#visor-bbdd">Visor BBDD</a></li>
-                <li><a href="#botmaster">BOTMASTER</a></li>
-                <li><a href="#virus">Virus</a></li>
-            </ul>
-        </li>
-        <li>Webgrafía
-            <ul>
-                <li><a href="#bbdd-webgrafía">BBDD</a></li>
-                <li><a href="#virus-webgrafía">Virus</a></li>
-                <li><a href="#pagina-videojuego">Página videojuego</a></li>
-                <li><a href="#beef-tool-webgrafía">Beef Tool</a></li>
-                <li><a href="#token-graven">Token Graven</a></li>
-            </ul>
-        </li>
-    </ul>
+<!-- Índice -->
+<div id="indice">
+    <div class="container">
+        <h1>Índice</h1>
+        <ul>
+            <li><a href="#gestion-proyecto">Gestión del proyecto</a></li>
+            <li><a href="#teoria">Teoría</a></li>
+            <li><a href="#diseno-arquitectura">Diseño y arquitectura</a></li>
+            <li><a href="#beef-tool">Beef Tool</a></li>
+            <li><a href="#troyano">Troyano</a></li>
+            <li><a href="#bbdd">BBDD</a></li>
+            <li><a href="#visor-bbdd">Visor BBDD</a></li>
+            <li><a href="#botmaster">BOTMASTER</a></li>
+            <li><a href="#virus">Virus</a></li>
+            <li><a href="#bbdd-web">BBDD (Webgrafía)</a></li>
+            <li><a href="#virus-web">Virus (Webgrafía)</a></li>
+            <li><a href="#pagina-videojuego">Página videojuego (Webgrafía)</a></li>
+            <li><a href="#beef-tool-web">Beef Tool (Webgrafía)</a></li>
+            <li><a href="#token-graven">Token Graven (Webgrafía)</a></li>
+        </ul>
+    </div>
 </div>
 
-<!-- Contenido -->
-<div id="contenido" class="container">
+<!-- Contenido de cada sección -->
+<div class="container">
     <h2 id="gestion-proyecto">Gestión del proyecto</h2>
-    <p>
-        La infraestructura de nuestro proyecto consiste en un servidor y varias máquinas virtuales dentro para ello vamos a utilizar el sistema de virtualización “VirtualBox”...
-    </p>
-</div>
+    <p>Aquí va el contenido de la gestión del proyecto...</p>
+
     <h2 id="teoria">Teoría</h2>
-    <p>
-        Lo primero que hay que entender de nuestro proyecto es que todo lo estamos haciendo está en un entorno seguro y que nadie externo al proyecto se ve afectado por el malware...
-    </p>
+    <p>Aquí va el contenido de la teoría...</p>
 
     <h2 id="diseno-arquitectura">Diseño y arquitectura</h2>
-    <p>
-        Aquí dejamos una captura del esquema y el link para que podáis ver el esquema que hemos hecho sobre cómo funciona nuestro proyecto y los apartados en los que se centran cada uno...
-    </p>
+    <p>Aquí va el contenido del diseño y arquitectura...</p>
 
     <h2 id="beef-tool">Beef Tool</h2>
-    <p>
-        La Beef Tool es una herramienta desarrollada por Wade Alcorn, que amplifica nuestras capacidades al permitirnos alojar una página web en un servidor Apache...
-    </p>
+    <p>Aquí va el contenido de Beef Tool...</p>
 
     <h2 id="troyano">Troyano</h2>
-    <p>
-        El camuflaje del troyano se efectuará dentro de un popular videojuego conocido como "Superfetch Dog". Esta elección no es aleatoria, pues este juego destaca por su atractivo comercial...
-    </p>
+    <p>Aquí va el contenido de Troyano...</p>
 
     <h2 id="bbdd">BBDD</h2>
-    <p>
-        La principalmente se iba hacer de la siguiente manera, primero íbamos a exportar la BBDD de la Beef Tool, para ello teníamos que pasar la BBDD a MySQL ya que en la Beef Tool está en formato SQL...
-    </p>
+    <p>Aquí va el contenido de BBDD...</p>
 
     <h2 id="visor-bbdd">Visor BBDD</h2>
-    <p>
-        El visor de la BBDD va a consistir en una interface donde se pueda ver la información de la BBDD, pero de manera que cualquiera lo pueda entender fácilmente y que sea más gráfica...
-    </p>
+    <p>Aquí va el contenido de Visor BBDD...</p>
 
     <h2 id="botmaster">BOTMASTER</h2>
-    <p>
-        La Bot Máster aún no se ha desarrollado ni implementado. Sin embargo, su concepto principal consiste en controlar múltiples dispositivos informáticos desde una ubicación centralizada...
-    </p>
+    <p>Aquí va el contenido de BOTMASTER...</p>
 
     <h2 id="virus">Virus</h2>
-    <p>
-        El virus que hemos hecho es con el fin de poder acceder al terminal del dispositivo el cual está infectado, para conseguir crear el virus hemos seguido una guía que hemos encontrado en esta web...
-    </p>
+    <p>Aquí va el contenido de Virus...</p>
 
-    <h2 id="bbdd-webgrafía">BBDD</h2>
-    <ul>
-        <li>MySQL</li>
-        <li>PostgreSQL Tutorial</li>
-        <li>DB Browser for SQLite (sqlitebrowser.org)</li>
-        <li>XAMPP Installers and Downloads for Apache Friends</li>
-        <li>JSON para principiantes: qué es, para qué sirve y ejemplos (hubspot.es)</li>
-    </ul>
+    <h2 id="bbdd-web">BBDD (Webgrafía)</h2>
+    <p>Aquí va el contenido de la webgrafía para BBDD...</p>
 
-    <h2 id="virus-webgrafía">Virus</h2>
-    <ul>
-        <li>Creación de virus, ocultación y control remoto del equipo víctima. Kali Linux. - Hardsoft Security</li>
-    </ul>
+    <h2 id="virus-web">Virus (Webgrafía)</h2>
+    <p>Aquí va el contenido de la webgrafía para Virus...</p>
 
-    <h2 id="pagina-videojuego">Página videojuego</h2>
-    <ul>
-        <li>Superfetch Dog en Steam (steampowered.com)</li>
-    </ul>
+    <h2 id="pagina-videojuego">Página videojuego (Webgrafía)</h2>
+    <p>Aquí va el contenido de la webgrafía para Página videojuego...</p>
 
-    <h2 id="beef-tool-webgrafía">Beef Tool</h2>
-    <ul>
-        <li>BeEF - The Browser Exploitation Framework Project (beefproject.com)</li>
-    </ul>
+    <h2 id="beef-tool-web">Beef Tool (Webgrafía)</h2>
+    <p>Aquí va el contenido de la webgrafía para Beef Tool...</p>
 
-    <h2 id="token-graven">Token Graven</h2>
+    <h2 id="token-graven">Token Graven (Webgrafía)</h2>
+    <p>Aquí va el contenido de la webgrafía para Token Graven...</p>
 </div>
 
 </body>
